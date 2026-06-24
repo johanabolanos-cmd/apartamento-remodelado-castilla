@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apartamento Remodelado · Ciudad Favi, Castilla · Bogotá</title>
+  <meta name="description" content="Apartamento remodelado de 52 m², 3 habitaciones, cocina abierta en cuarzo. Conjunto Ciudad Favi, Castilla, Bogotá. $270.000.000. Entrega inmediata." />
+
+  <!-- ===== FUENTES ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===========================================
+       TOKENS — edita aquí colores y tipografías
+    =========================================== */
+    :root {
+      --blanco:     #FFFFFF;
+      --beige:      #F7F4EF;
+      --beige-dark: #EDE8E0;
+      --negro:      #2C2C2C;
+      --gris:       #8C7B6B;
+      --cobre:      #C4956A;   /* acento principal — cámbialo aquí si deseas */
+      --cobre-suave:#F0E6D8;
+      --fuente-display: 'Cormorant Garamond', Georgia, serif;
+      --fuente-body:    'DM Sans', system-ui, sans-serif;
+      --radio: 4px;
+      --sombra: 0 4px 24px rgba(44,44,44,.08);
+    }
+
+    /* ===========================================
+       RESET Y BASE
+    =========================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--fuente-body);
+      color: var(--negro);
+      background: var(--blanco);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ===========================================
+       UTILIDADES
+    =========================================== */
+    .container {
+      width: min(1140px, 92%);
+      margin-inline: auto;
+    }
+    .eyebrow {
+      font-family: var(--fuente-body);
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--cobre);
+    }
+    .section-title {
+      font-family: var(--fuente-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--negro);
+    }
+    .section-lead {
+      font-size: .95rem;
+      color: var(--gris);
+      max-width: 560px;
+      line-height: 1.75;
+    }
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--cobre);
+      margin: 1rem 0 1.5rem;
+    }
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      background: var(--cobre);
+      color: var(--blanco);
+      font-family: var(--fuente-body);
+      font-size: .9rem;
+      font-weight: 500;
+      padding: .85rem 1.75rem;
+      border-radius: var(--radio);
+      transition: background .25s, transform .2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-wa:hover { background: #b0844f; transform: translateY(-1px); }
+    .btn-wa svg { flex-shrink: 0; }
+
+    /* ===========================================
+       HEADER
+    =========================================== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--beige-dark);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .85rem 0;
+    }
+    .header-brand {
+      font-family: var(--fuente-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: .02em;
+    }
+    .header-brand span { color: var(--cobre); }
+    .header-cta {
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--cobre);
+      border: 1px solid var(--cobre);
+      padding: .45rem 1.1rem;
+      border-radius: var(--radio);
+      transition: background .2s, color .2s;
+    }
+    .header-cta:hover { background: var(--cobre); color: var(--blanco); }
+
+    /* ===========================================
+       HERO
+    =========================================== */
+    .hero {
+      padding-top: calc(64px + 5rem);
+      padding-bottom: 5rem;
+      background: var(--beige);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 0%, var(--cobre-suave) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--cobre-suave);
+      color: var(--cobre);
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .35rem .9rem;
+      border-radius: 2px;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-family: var(--fuente-display);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .hero h1 strong {
+      font-weight: 600;
+      display: block;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--gris);
+      margin-bottom: 1.75rem;
+      line-height: 1.7;
+    }
+    /* ===== PRECIO — cambia el valor aquí si es necesario ===== */
+    .hero-precio {
+      font-family: var(--fuente-display);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 500;
+      margin-bottom: .4rem;
+    }
+    .hero-precio-nota {
+      font-size: .82rem;
+      color: var(--gris);
+      margin-bottom: 1.75rem;
+    }
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: 1.5rem;
+    }
+    .chip {
+      font-size: .78rem;
+      padding: .35rem .85rem;
+      border: 1px solid var(--beige-dark);
+      border-radius: 20px;
+      background: var(--blanco);
+      color: var(--gris);
+    }
+    /* Imagen hero / placeholder principal */
+    .hero-media {
+      aspect-ratio: 4/3;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      position: relative;
+    }
+    /* ===== PLACEHOLDER — reemplaza con: <img src="fotos/sala.jpg" alt="Sala comedor"> ===== */
+    .placeholder {
+      width: 100%;
+      height: 100%;
+      background: var(--beige-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      color: var(--gris);
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .placeholder svg { opacity: .35; }
+
+    /* ===========================================
+       GALERÍA
+    =========================================== */
+    .galeria { padding: 5rem 0; background: var(--blanco); }
+    .galeria-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    /* Grid asimétrico: foto grande a la izquierda, 3 pequeñas a la derecha */
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      grid-template-rows: 260px 260px;
+      gap: 10px;
+    }
+    .galeria-item { border-radius: 4px; overflow: hidden; position: relative; }
+    .galeria-item:first-child {
+      grid-row: 1 / 3;
+    }
+    .galeria-item:nth-child(2) { grid-column: 2; grid-row: 1; }
+    .galeria-item:nth-child(3) { grid-column: 3; grid-row: 1; }
+    .galeria-item:nth-child(4) { grid-column: 2; grid-row: 2; }
+    .galeria-item:nth-child(5) { grid-column: 3; grid-row: 2; }
+    /* Segunda fila de galería: 3 iguales */
+    .galeria-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .galeria-grid-2 .galeria-item { height: 240px; }
+
+    /* ===========================================
+       VIDEO RECORRIDO
+    =========================================== */
+    .video-section { padding: 5rem 0; background: var(--beige); }
+    .video-wrap {
+      margin-top: 2rem;
+      aspect-ratio: 16/9;
+      background: var(--negro);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* ===== VIDEO — reemplaza con: <video src="videos/recorrido.mp4" controls poster="fotos/sala.jpg"></video> ===== */
+    .video-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      color: rgba(255,255,255,.6);
+    }
+    .video-placeholder .play-icon {
+      width: 72px; height: 72px;
+      border: 2px solid rgba(255,255,255,.4);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .video-placeholder p {
+      font-family: var(--fuente-display);
+      font-size: 1.2rem;
+      letter-spacing: .04em;
+    }
+    .video-placeholder small {
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .5;
+    }
+
+    /* ===========================================
+       CARACTERÍSTICAS
+    =========================================== */
+    .caracteristicas { padding: 5rem 0; background: var(--blanco); }
+    .caract-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .caract-card {
+      padding: 1.75rem 1.5rem;
+      border: 1px solid var(--beige-dark);
+      border-radius: 6px;
+      text-align: center;
+      transition: box-shadow .25s, border-color .25s;
+    }
+    .caract-card:hover {
+      box-shadow: var(--sombra);
+      border-color: var(--cobre-suave);
+    }
+    .caract-icon {
+      font-size: 1.8rem;
+      margin-bottom: .75rem;
+    }
+    .caract-valor {
+      font-family: var(--fuente-display);
+      font-size: 1.6rem;
+      font-weight: 500;
+      display: block;
+    }
+    .caract-label {
+      font-size: .8rem;
+      color: var(--gris);
+      margin-top: .2rem;
+    }
+
+    /* ===========================================
+       REMODELACIÓN — fichas con línea lateral
+    =========================================== */
+    .remodelacion { padding: 5rem 0; background: var(--beige); }
+    .remo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .remo-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.4rem 1.5rem;
+      background: var(--blanco);
+      border-radius: 6px;
+      border-left: 3px solid var(--cobre);
+      transition: box-shadow .2s;
+    }
+    .remo-item:hover { box-shadow: var(--sombra); }
+    .remo-emoji { font-size: 1.4rem; flex-shrink: 0; line-height: 1; margin-top: .1rem; }
+    .remo-text strong {
+      display: block;
+      font-size: .92rem;
+      font-weight: 500;
+      margin-bottom: .15rem;
+    }
+    .remo-text span { font-size: .82rem; color: var(--gris); }
+
+    /* ===========================================
+       DISTRIBUCIÓN
+    =========================================== */
+    .distribucion { padding: 5rem 0; background: var(--blanco); }
+    .dist-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    .dist-list { display: flex; flex-direction: column; gap: 1rem; }
+    .dist-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .9rem 0;
+      border-bottom: 1px solid var(--beige-dark);
+    }
+    .dist-row:last-child { border-bottom: none; }
+    .dist-nombre { font-size: .92rem; font-weight: 500; }
+    .dist-detalle { font-size: .82rem; color: var(--gris); }
+    .dist-plano {
+      aspect-ratio: 1;
+      background: var(--beige);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gris);
+      font-size: .8rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    /* Plano SVG simplificado — ilustrativo */
+    .plano-svg { width: 85%; max-width: 320px; }
+
+    /* ===========================================
+       CONJUNTO
+    =========================================== */
+    .conjunto { padding: 5rem 0; background: var(--beige); }
+    .conjunto-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .conjunto-item {
+      background: var(--blanco);
+      padding: 1.5rem;
+      border-radius: 6px;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .conjunto-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .conjunto-desc strong { display: block; font-size: .9rem; margin-bottom: .2rem; }
+    .conjunto-desc span { font-size: .8rem; color: var(--gris); }
+
+    /* ===========================================
+       UBICACIÓN
+    =========================================== */
+    .ubicacion { padding: 5rem 0; background: var(--blanco); }
+    .ubic-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 2rem;
+    }
+    .ubic-lista { display: flex; flex-direction: column; gap: .85rem; margin-top: 1.5rem; }
+    .ubic-fila {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .ubic-tiempo {
+      background: var(--cobre-suave);
+      color: var(--cobre);
+      font-size: .75rem;
+      font-weight: 500;
+      padding: .3rem .7rem;
+      border-radius: 20px;
+      white-space: nowrap;
+      min-width: 70px;
+      text-align: center;
+    }
+    .ubic-lugar { font-size: .9rem; }
+    .ubic-mapa {
+      aspect-ratio: 4/3;
+      background: var(--beige);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--gris);
+      font-size: .82rem;
+      padding: 1rem;
+      border: 1px dashed var(--beige-dark);
+    }
+    .ubic-mapa-inner { display: flex; flex-direction: column; align-items: center; gap: .75rem; }
+    .pin { font-size: 2rem; }
+
+    /* ===========================================
+       IDEAL PARA
+    =========================================== */
+    .ideal { padding: 5rem 0; background: var(--beige); }
+    .ideal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .ideal-card {
+      background: var(--blanco);
+      padding: 2rem 1.75rem;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .ideal-emoji { font-size: 2.2rem; margin-bottom: 1rem; }
+    .ideal-titulo {
+      font-family: var(--fuente-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: .5rem;
+    }
+    .ideal-desc { font-size: .83rem; color: var(--gris); line-height: 1.65; }
+
+    /* ===========================================
+       PRECIO Y CONDICIONES
+    =========================================== */
+    .precio { padding: 5rem 0; background: var(--negro); color: var(--blanco); }
+    .precio .eyebrow { color: var(--cobre); }
+    .precio .section-title { color: var(--blanco); }
+    .precio-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    /* ===== PRECIO — cambia el valor aquí ===== */
+    .precio-valor {
+      font-family: var(--fuente-display);
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1;
+      margin: 1rem 0 .5rem;
+    }
+    .precio-valor span { color: var(--cobre); }
+    .precio-nota { font-size: .85rem; color: rgba(255,255,255,.45); margin-bottom: 2rem; }
+    .precio-condiciones { display: flex; flex-direction: column; gap: 1rem; }
+    .cond-fila {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.2rem 1.5rem;
+      background: rgba(255,255,255,.05);
+      border-radius: 6px;
+      border-left: 2px solid var(--cobre);
+    }
+    .cond-fila strong { display: block; font-size: .9rem; margin-bottom: .2rem; }
+    .cond-fila span { font-size: .82rem; color: rgba(255,255,255,.5); }
+    .cond-icon { font-size: 1.3rem; flex-shrink: 0; }
+
+    /* ===========================================
+       CTA FINAL
+    =========================================== */
+    .cta-final {
+      padding: 6rem 0;
+      background: var(--beige);
+      text-align: center;
+    }
+    .cta-final .section-title { max-width: 600px; margin-inline: auto; margin-bottom: 1rem; }
+    .cta-final .section-lead { margin-inline: auto; text-align: center; margin-bottom: 2rem; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      border: 1.5px solid var(--cobre);
+      color: var(--cobre);
+      font-size: .9rem;
+      font-weight: 500;
+      padding: .85rem 1.75rem;
+      border-radius: var(--radio);
+      transition: background .2s, color .2s;
+    }
+    .btn-secondary:hover { background: var(--cobre); color: var(--blanco); }
+    .cta-admin {
+      margin-top: 2.5rem;
+      font-size: .82rem;
+      color: var(--gris);
+    }
+    .cta-admin strong { color: var(--negro); }
+
+    /* ===========================================
+       FOOTER
+    =========================================== */
+    footer {
+      background: var(--negro);
+      color: rgba(255,255,255,.35);
+      padding: 2rem 0;
+      text-align: center;
+      font-size: .8rem;
+    }
+
+    /* ===========================================
+       BOTÓN FLOTANTE WHATSAPP
+    =========================================== */
+    /* ===== WhatsApp: cambia el href para modificar número o mensaje ===== */
+    .wa-float {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      z-index: 200;
+      width: 56px; height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,.4);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .wa-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 24px rgba(37,211,102,.5);
+    }
+    .wa-tooltip {
+      position: absolute;
+      right: 68px;
+      background: var(--negro);
+      color: var(--blanco);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding: .4rem .85rem;
+      border-radius: 4px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s;
+    }
+    .wa-float:hover .wa-tooltip { opacity: 1; }
+
+    /* ===========================================
+       ANIMACIONES SCROLL
+    =========================================== */
+    .fade-up {
+      opacity: 1;
+      transform: none;
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===========================================
+       RESPONSIVE MOBILE
+    =========================================== */
+    @media (max-width: 768px) {
+      .hero-grid,
+      .dist-wrap,
+      .ubic-wrap,
+      .precio-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      .remo-grid { grid-template-columns: 1fr; }
+      .galeria-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .galeria-item:first-child { grid-row: auto; grid-column: 1 / -1; height: 240px; }
+      .galeria-item { height: 180px; }
+      .galeria-item:nth-child(n) { grid-column: auto; grid-row: auto; }
+      .galeria-grid-2 { grid-template-columns: 1fr 1fr; }
+      .galeria-grid-2 .galeria-item { height: 180px; }
+      .galeria-grid-2 .galeria-item:last-child { grid-column: 1 / -1; }
+      .header-brand { font-size: .95rem; }
+      .precio-valor { font-size: 2.6rem; }
+      section { padding: 3.5rem 0; }
+    }
+    @media (max-width: 480px) {
+      .caract-grid { grid-template-columns: repeat(2, 1fr); }
+      .ideal-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================
+       HEADER
+  ============================= -->
+  <header>
+    <div class="container header-inner">
+      <div class="header-brand">Ciudad Favi · <span>Castilla</span></div>
+      <!-- ===== WhatsApp número: 573124066324 — cámbialo también en el botón flotante y en la sección CTA ===== -->
+      <a href="https://wa.me/573124066324?text=Hola%2C%20quiero%20agendar%20una%20visita%20al%20apartamento%20remodelado%20en%20Ciudad%20Favi%2C%20Castilla." class="header-cta" target="_blank" rel="noopener">Agendar visita</a>
+    </div>
+  </header>
+
+  <!-- ============================
+       HERO
+  ============================= -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy fade-up">
+          <div class="hero-tag">Entrega inmediata · Documentación al día</div>
+          <h1>Apartamento<br><strong>completamente remodelado</strong></h1>
+          <p class="hero-sub">
+            52 m² · 3 habitaciones · Cocina en cuarzo · Piso SPC<br>
+            Conjunto Ciudad Favi, Barrio Favidi — Castilla, Bogotá
+          </p>
+          <!-- ===== PRECIO — edita aquí ===== -->
+          <div class="hero-precio">$270.000.000</div>
+          <div class="hero-precio-nota">Contado o crédito hipotecario · Admin. $133.000/mes</div>
+
+          <a href="https://wa.me/573124066324?text=Hola%2C%20quiero%20agendar%20una%20visita%20al%20apartamento%20remodelado%20en%20Ciudad%20Favi%2C%20Castilla." class="btn-wa" target="_blank" rel="noopener">
+            <!-- WhatsApp icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.106 1.514 5.83L.057 23.5a.5.5 0 00.64.64l5.67-1.457A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.671-.515-5.197-1.41l-.373-.222-3.865.993.993-3.866-.221-.373A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Agendar visita por WhatsApp
+          </a>
+
+          <div class="hero-chips">
+            <span class="chip">🏢 Estrato 3</span>
+            <span class="chip">🪜 Piso 3</span>
+            <span class="chip">🚗 Parqueadero comunal</span>
+            <span class="chip">🔑 Estrenar</span>
+          </div>
+        </div>
+
+        <div class="hero-media fade-up" style="transition-delay:.15s">
+          <!-- ===== FOTO PRINCIPAL — reemplaza por: <img src="fotos/sala.jpg" alt="Sala comedor apartamento remodelado Ciudad Favi"> ===== -->
+          <div class="placeholder">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            FOTO SALA COMEDOR
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       GALERÍA
+  ============================= -->
+  <section class="galeria" id="fotos">
+    <div class="container">
+      <div class="galeria-header fade-up">
+        <div>
+          <p class="eyebrow">Galería</p>
+          <div class="divider"></div>
+          <h2 class="section-title">Cada espacio,<br><em>renovado desde cero</em></h2>
+        </div>
+      </div>
+
+      <!-- Grid principal: 5 fotos -->
+      <div class="galeria-grid fade-up" style="transition-delay:.1s">
+
+        <!-- ===== FOTO 1 — reemplaza por: <img src="fotos/sala.jpg" alt="Sala comedor"> ===== -->
+        <div class="galeria-item">
+          <div class="placeholder">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            FOTO SALA COMEDOR
+          </div>
+        </div>
+
+        <!-- ===== FOTO 2 — reemplaza por: <img src="fotos/cocina.jpg" alt="Cocina abierta en cuarzo"> ===== -->
+        <div class="galeria-item">
+          <div class="placeholder">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            FOTO COCINA
+          </div>
+        </div>
+
+        <!-- ===== FOTO 3 — reemplaza por: <img src="fotos/bano.jpg" alt="Baño remodelado con vidrio templado"> ===== -->
+        <div class="galeria-item">
+          <div class="placeholder">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            FOTO BAÑO
+          </div>
+        </div>
+
+        <!-- ===== FOTO 4 — reemplaza por: <img src="fotos/habitacion-principal.jpg" alt="Habitación principal con clóset nuevo"> ===== -->
+        <div class="galeria-item">
+          <div class="placeholder">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            FOTO HABITACIÓN PRINCIPAL
+          </div>
+        </div>
+
+        <!-- ===== FOTO 5 — reemplaza por: <img src="fotos/habitacion-2.jpg" alt="Habitación 2 con clóset"> ===== -->
+        <div class="galeria-item">
+          <div class="placeholder">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            FOTO HABITACIÓN 2
+          </div>
+        </div>
+      </div>
+
+      <!-- Segunda fila: 3 fotos -->
+      <div class="galeria-grid-2 fade-up" style="transition-delay:.2s">
+
+        <!-- ===== FOTO 6 — reemplaza por: <img src="fotos/habitacion-3.jpg" alt="Habitación 3"> ===== -->
+        <div class="galeria-item">
+          <div class="placeholder">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            FOTO HABITACIÓN 3
+          </div>
+        </div>
+
+        <!-- ===== FOTO 7 — reemplaza por: <img src="fotos/zonas-verdes.jpg" alt="Zonas verdes conjunto Ciudad Favi"> ===== -->
+        <div class="galeria-item">
+          <div class="placeholder">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            FOTO VISTA ZONAS VERDES
+          </div>
+        </div>
+
+        <!-- ===== FOTO 8 — reemplaza por: <img src="fotos/zonas-comunes.jpg" alt="Zonas comunes conjunto Ciudad Favi"> ===== -->
+        <div class="galeria-item">
+          <div class="placeholder">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            FOTO ZONAS COMUNES
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       VIDEO RECORRIDO
+  ============================= -->
+  <section class="video-section" id="video">
+    <div class="container">
+      <div class="fade-up">
+        <p class="eyebrow">Recorrido virtual</p>
+        <div class="divider"></div>
+        <h2 class="section-title">Recorre el apartamento<br><em>antes de visitarlo</em></h2>
+      </div>
+      <div class="video-wrap fade-up" style="transition-delay:.1s">
+        <!-- ===== VIDEO — reemplaza este bloque completo por: =====
+             <video src="videos/recorrido.mp4" controls poster="fotos/sala.jpg" style="width:100%;height:100%;object-fit:cover;"></video>
+        ===== -->
+        <div class="video-placeholder">
+          <div class="play-icon">
+            <svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <p>Video recorrido del apartamento</p>
+          <small>Ciudad Favi · Castilla · Bogotá</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       CARACTERÍSTICAS PRINCIPALES
+  ============================= -->
+  <section class="caracteristicas" id="caracteristicas">
+    <div class="container">
+      <div class="fade-up">
+        <p class="eyebrow">Ficha técnica</p>
+        <div class="divider"></div>
+        <h2 class="section-title">Todo lo que necesitas<br><em>en 52 m²</em></h2>
+      </div>
+      <div class="caract-grid fade-up" style="transition-delay:.1s">
+        <div class="caract-card">
+          <div class="caract-icon">📐</div>
+          <span class="caract-valor">52 m²</span>
+          <div class="caract-label">Área total</div>
+        </div>
+        <div class="caract-card">
+          <div class="caract-icon">🛏</div>
+          <span class="caract-valor">3</span>
+          <div class="caract-label">Habitaciones</div>
+        </div>
+        <div class="caract-card">
+          <div class="caract-icon">🚿</div>
+          <span class="caract-valor">1</span>
+          <div class="caract-label">Baño remodelado</div>
+        </div>
+        <div class="caract-card">
+          <div class="caract-icon">🪜</div>
+          <span class="caract-valor">Piso 3</span>
+          <div class="caract-label">Sin ascensor</div>
+        </div>
+        <div class="caract-card">
+          <div class="caract-icon">🚗</div>
+          <span class="caract-valor">Sí</span>
+          <div class="caract-label">Parqueadero comunal</div>
+        </div>
+        <div class="caract-card">
+          <div class="caract-icon">⚡</div>
+          <span class="caract-valor">3</span>
+          <div class="caract-label">Estrato</div>
+        </div>
+        <div class="caract-card">
+          <div class="caract-icon">📋</div>
+          <span class="caract-valor">Al día</span>
+          <div class="caract-label">Documentación</div>
+        </div>
+        <div class="caract-card">
+          <div class="caract-icon">🔑</div>
+          <span class="caract-valor">Ya</span>
+          <div class="caract-label">Entrega inmediata</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       REMODELACIÓN
+  ============================= -->
+  <section class="remodelacion" id="remodelacion">
+    <div class="container">
+      <div class="fade-up">
+        <p class="eyebrow">Remodelación integral</p>
+        <div class="divider"></div>
+        <h2 class="section-title">Renovado desde adentro,<br><em>listo para estrenar</em></h2>
+        <p class="section-lead" style="margin-top:.75rem">Cada rincón fue intervenido con materiales modernos y acabados de buena calidad. No hay nada pendiente por hacer.</p>
+      </div>
+      <div class="remo-grid fade-up" style="transition-delay:.1s">
+        <div class="remo-item">
+          <div class="remo-emoji">🍳</div>
+          <div class="remo-text">
+            <strong>Cocina abierta nueva</strong>
+            <span>Diseño moderno integrado a la sala</span>
+          </div>
+        </div>
+        <div class="remo-item">
+          <div class="remo-emoji">🪨</div>
+          <div class="remo-text">
+            <strong>Mesón en cuarzo</strong>
+            <span>Resistente, fácil de limpiar y durable</span>
+          </div>
+        </div>
+        <div class="remo-item">
+          <div class="remo-emoji">🏠</div>
+          <div class="remo-text">
+            <strong>Piso SPC en toda la unidad</strong>
+            <span>Resistente al agua, antideslizante</span>
+          </div>
+        </div>
+        <div class="remo-item">
+          <div class="remo-emoji">🚿</div>
+          <div class="remo-text">
+            <strong>Baño completamente remodelado</strong>
+            <span>División en vidrio templado y grifería nueva</span>
+          </div>
+        </div>
+        <div class="remo-item">
+          <div class="remo-emoji">🚪</div>
+          <div class="remo-text">
+            <strong>Puertas nuevas</strong>
+            <span>Instaladas en todas las habitaciones</span>
+          </div>
+        </div>
+        <div class="remo-item">
+          <div class="remo-emoji">🗄</div>
+          <div class="remo-text">
+            <strong>Clósets nuevos en las 3 habitaciones</strong>
+            <span>Con buen aprovechamiento del espacio</span>
+          </div>
+        </div>
+        <div class="remo-item">
+          <div class="remo-emoji">💡</div>
+          <div class="remo-text">
+            <strong>Iluminación LED</strong>
+            <span>En todos los espacios del apartamento</span>
+          </div>
+        </div>
+        <div class="remo-item">
+          <div class="remo-emoji">🎨</div>
+          <div class="remo-text">
+            <strong>Pintura general</strong>
+            <span>Tonos claros, ambiente fresco</span>
+          </div>
+        </div>
+        <div class="remo-item">
+          <div class="remo-emoji">🫧</div>
+          <div class="remo-text">
+            <strong>Espacio para lavadora</strong>
+            <span>Conexiones listas, sin obras adicionales</span>
+          </div>
+        </div>
+        <div class="remo-item">
+          <div class="remo-emoji">✨</div>
+          <div class="remo-text">
+            <strong>Acabados modernos</strong>
+            <span>Coherentes en todo el apartamento</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       DISTRIBUCIÓN
+  ============================= -->
+  <section class="distribucion" id="distribucion">
+    <div class="container">
+      <div class="fade-up">
+        <p class="eyebrow">Distribución</p>
+        <div class="divider"></div>
+        <h2 class="section-title">Un espacio bien<br><em>organizado</em></h2>
+      </div>
+      <div class="dist-wrap fade-up" style="transition-delay:.1s">
+        <div class="dist-list">
+          <div class="dist-row">
+            <span class="dist-nombre">Sala · Comedor</span>
+            <span class="dist-detalle">Integrado con cocina abierta</span>
+          </div>
+          <div class="dist-row">
+            <span class="dist-nombre">Cocina</span>
+            <span class="dist-detalle">Abierta, mesón en cuarzo</span>
+          </div>
+          <div class="dist-row">
+            <span class="dist-nombre">Habitación principal</span>
+            <span class="dist-detalle">Con clóset nuevo</span>
+          </div>
+          <div class="dist-row">
+            <span class="dist-nombre">Habitación 2</span>
+            <span class="dist-detalle">Con clóset nuevo</span>
+          </div>
+          <div class="dist-row">
+            <span class="dist-nombre">Habitación 3</span>
+            <span class="dist-detalle">Con clóset nuevo</span>
+          </div>
+          <div class="dist-row">
+            <span class="dist-nombre">Baño</span>
+            <span class="dist-detalle">Remodelado · vidrio templado</span>
+          </div>
+          <div class="dist-row">
+            <span class="dist-nombre">Zona de ropas</span>
+            <span class="dist-detalle">Conexión para lavadora</span>
+          </div>
+        </div>
+
+        <!-- Plano ilustrativo SVG -->
+        <div class="dist-plano">
+          <svg class="plano-svg" viewBox="0 0 320 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Paredes exteriores -->
+            <rect x="10" y="10" width="300" height="260" rx="4" stroke="#C4956A" stroke-width="2.5" fill="#F7F4EF"/>
+            <!-- Sala-Comedor -->
+            <rect x="10" y="10" width="165" height="130" fill="#EDE8E0" stroke="#C4956A" stroke-width="1"/>
+            <text x="78" y="75" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#8C7B6B">Sala · Comedor</text>
+            <!-- Cocina -->
+            <rect x="175" y="10" width="135" height="90" fill="#F0E6D8" stroke="#C4956A" stroke-width="1"/>
+            <text x="242" y="58" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#C4956A">Cocina</text>
+            <!-- Baño -->
+            <rect x="175" y="100" width="135" height="50" fill="#EDE8E0" stroke="#C4956A" stroke-width="1"/>
+            <text x="242" y="128" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#8C7B6B">Baño</text>
+            <!-- Habitación principal -->
+            <rect x="10" y="140" width="140" height="130" fill="#EDE8E0" stroke="#C4956A" stroke-width="1"/>
+            <text x="80" y="205" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#8C7B6B">Hab. Principal</text>
+            <!-- Hab 2 -->
+            <rect x="150" y="150" width="80" height="120" fill="#F7F4EF" stroke="#C4956A" stroke-width="1"/>
+            <text x="190" y="213" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#8C7B6B">Hab. 2</text>
+            <!-- Hab 3 -->
+            <rect x="230" y="150" width="80" height="120" fill="#F7F4EF" stroke="#C4956A" stroke-width="1"/>
+            <text x="270" y="213" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#8C7B6B">Hab. 3</text>
+            <!-- Etiqueta área -->
+            <text x="160" y="272" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#C4956A" letter-spacing="1">52 m² · Distribución ilustrativa</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       CONJUNTO RESIDENCIAL
+  ============================= -->
+  <section class="conjunto" id="conjunto">
+    <div class="container">
+      <div class="fade-up">
+        <p class="eyebrow">Conjunto Ciudad Favi</p>
+        <div class="divider"></div>
+        <h2 class="section-title">Más que un apartamento,<br><em>una comunidad con espacios</em></h2>
+      </div>
+      <div class="conjunto-grid fade-up" style="transition-delay:.1s">
+        <div class="conjunto-item">
+          <div class="conjunto-icon">🛡</div>
+          <div class="conjunto-desc">
+            <strong>Vigilancia 24 horas</strong>
+            <span>Portería con control permanente</span>
+          </div>
+        </div>
+        <div class="conjunto-item">
+          <div class="conjunto-icon">🏛</div>
+          <div class="conjunto-desc">
+            <strong>Salón comunal</strong>
+            <span>Para reuniones y celebraciones</span>
+          </div>
+        </div>
+        <div class="conjunto-item">
+          <div class="conjunto-icon">🛝</div>
+          <div class="conjunto-desc">
+            <strong>Parque infantil</strong>
+            <span>Zona de juegos para niños</span>
+          </div>
+        </div>
+        <div class="conjunto-item">
+          <div class="conjunto-icon">⚽</div>
+          <div class="conjunto-desc">
+            <strong>Cancha múltiple</strong>
+            <span>Microfútbol y actividades deportivas</span>
+          </div>
+        </div>
+        <div class="conjunto-item">
+          <div class="conjunto-icon">🏋️</div>
+          <div class="conjunto-desc">
+            <strong>Gimnasio biosaludable</strong>
+            <span>Equipos al aire libre para todos</span>
+          </div>
+        </div>
+        <div class="conjunto-item">
+          <div class="conjunto-icon">🌿</div>
+          <div class="conjunto-desc">
+            <strong>Amplias zonas verdes</strong>
+            <span>Para caminar, descansar y disfrutar</span>
+          </div>
+        </div>
+        <div class="conjunto-item">
+          <div class="conjunto-icon">🚗</div>
+          <div class="conjunto-desc">
+            <strong>Parqueadero comunal</strong>
+            <span>Con baja demanda en el conjunto</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       UBICACIÓN
+  ============================= -->
+  <section class="ubicacion" id="ubicacion">
+    <div class="container">
+      <div class="fade-up">
+        <p class="eyebrow">Ubicación</p>
+        <div class="divider"></div>
+        <h2 class="section-title">Bien conectado,<br><em>cerca de todo</em></h2>
+      </div>
+      <div class="ubic-wrap fade-up" style="transition-delay:.1s">
+        <div>
+          <p class="section-lead">Barrio Favidi, sector Castilla, en el occidente de Bogotá. Zona residencial consolidada con servicios, colegios y transporte a la mano.</p>
+          <div class="ubic-lista">
+            <div class="ubic-fila">
+              <span class="ubic-tiempo">5 min</span>
+              <span class="ubic-lugar">Centro Comercial El Edén</span>
+            </div>
+            <div class="ubic-fila">
+              <span class="ubic-tiempo">10 min</span>
+              <span class="ubic-lugar">Multiplaza</span>
+            </div>
+            <div class="ubic-fila">
+              <span class="ubic-tiempo">15 min</span>
+              <span class="ubic-lugar">Centro Comercial Hayuelos</span>
+            </div>
+            <div class="ubic-fila">
+              <span class="ubic-tiempo">Cercano</span>
+              <span class="ubic-lugar">Estación Banderas · SITP</span>
+            </div>
+            <div class="ubic-fila">
+              <span class="ubic-tiempo">Zona</span>
+              <span class="ubic-lugar">Colegios y parques en el barrio</span>
+            </div>
+          </div>
+        </div>
+        <div class="ubic-mapa">
+          <!-- Para insertar mapa real de Google Maps, reemplaza este bloque por un iframe embed -->
+          <div class="ubic-mapa-inner">
+            <div class="pin">📍</div>
+            <strong style="font-size:.92rem;color:var(--negro)">Conjunto Ciudad Favi</strong>
+            <span>Barrio Favidi · Castilla · Bogotá</span>
+            <a href="https://maps.google.com/?q=Ciudad+Favi+Barrio+Favidi+Castilla+Bogota" target="_blank" rel="noopener" style="margin-top:.5rem;font-size:.8rem;color:var(--cobre);font-weight:500">Ver en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       IDEAL PARA
+  ============================= -->
+  <section class="ideal" id="ideal">
+    <div class="container">
+      <div class="fade-up">
+        <p class="eyebrow">¿Para quién es este apartamento?</p>
+        <div class="divider"></div>
+        <h2 class="section-title">Diseñado para<br><em>quien lo va a vivir</em></h2>
+      </div>
+      <div class="ideal-grid fade-up" style="transition-delay:.1s">
+        <div class="ideal-card">
+          <div class="ideal-emoji">👨‍👩‍👧</div>
+          <div class="ideal-titulo">Familias pequeñas</div>
+          <p class="ideal-desc">Tres habitaciones bien distribuidas, zonas verdes y parque infantil dentro del conjunto.</p>
+        </div>
+        <div class="ideal-card">
+          <div class="ideal-emoji">💑</div>
+          <div class="ideal-titulo">Parejas jóvenes</div>
+          <p class="ideal-desc">Apartamento listo para habitar desde el primer día, sin inversión adicional en adecuaciones.</p>
+        </div>
+        <div class="ideal-card">
+          <div class="ideal-emoji">🏡</div>
+          <div class="ideal-titulo">Primera vivienda</div>
+          <p class="ideal-desc">Documentación al día, apto para crédito hipotecario y subsidios de vivienda.</p>
+        </div>
+        <div class="ideal-card">
+          <div class="ideal-emoji">📈</div>
+          <div class="ideal-titulo">Inversión para arrendar</div>
+          <p class="ideal-desc">Inmueble en condiciones de entrega inmediata, ideal para generar renta desde el primer mes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       PRECIO Y CONDICIONES
+  ============================= -->
+  <section class="precio" id="precio">
+    <div class="container">
+      <div class="precio-wrap fade-up">
+        <div>
+          <p class="eyebrow">Precio de venta</p>
+          <div class="divider"></div>
+          <!-- ===== PRECIO — edita aquí ===== -->
+          <div class="hero-precio" style="color:#fff;font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,4.5rem);font-weight:300;line-height:1;margin:1rem 0 .5rem">
+            $<span style="color:var(--cobre)">270.000.000</span>
+          </div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.4);margin-bottom:2rem">Pesos colombianos · Negociable</p>
+          <a href="https://wa.me/573124066324?text=Hola%2C%20quiero%20agendar%20una%20visita%20al%20apartamento%20remodelado%20en%20Ciudad%20Favi%2C%20Castilla." class="btn-wa" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.106 1.514 5.83L.057 23.5a.5.5 0 00.64.64l5.67-1.457A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.671-.515-5.197-1.41l-.373-.222-3.865.993.993-3.866-.221-.373A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Preguntar por este apartamento
+          </a>
+        </div>
+        <div class="precio-condiciones">
+          <div class="cond-fila">
+            <div class="cond-icon">💵</div>
+            <div>
+              <strong>Compra de contado</strong>
+              <span>Proceso ágil con escrituración directa</span>
+            </div>
+          </div>
+          <div class="cond-fila">
+            <div class="cond-icon">🏦</div>
+            <div>
+              <strong>Crédito hipotecario</strong>
+              <span>Apto para todos los bancos. Documentación lista</span>
+            </div>
+          </div>
+          <div class="cond-fila">
+            <div class="cond-icon">📋</div>
+            <div>
+              <strong>Administración mensual</strong>
+              <!-- ===== ADMIN — edita aquí ===== -->
+              <span>$133.000 / mes</span>
+            </div>
+          </div>
+          <div class="cond-fila">
+            <div class="cond-icon">🔑</div>
+            <div>
+              <strong>Entrega inmediata</strong>
+              <span>Sin obras pendientes. Listo para habitar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       CTA FINAL
+  ============================= -->
+  <section class="cta-final" id="contacto">
+    <div class="container">
+      <p class="eyebrow fade-up">¿Te interesa?</p>
+      <div class="divider fade-up" style="margin-inline:auto;"></div>
+      <h2 class="section-title fade-up">Agenda una visita<br><em>y conócelo en persona</em></h2>
+      <p class="section-lead fade-up" style="transition-delay:.1s">Sin presión ni compromisos. Visita el apartamento, verifica el estado y resuelve todas tus dudas directamente.</p>
+      <div class="cta-btns fade-up" style="transition-delay:.15s">
+        <!-- ===== WhatsApp — número y mensaje editables aquí ===== -->
+        <a href="https://wa.me/573124066324?text=Hola%2C%20quiero%20agendar%20una%20visita%20al%20apartamento%20remodelado%20en%20Ciudad%20Favi%2C%20Castilla." class="btn-wa" target="_blank" rel="noopener" style="font-size:1rem;padding:1rem 2rem">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.106 1.514 5.83L.057 23.5a.5.5 0 00.64.64l5.67-1.457A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.671-.515-5.197-1.41l-.373-.222-3.865.993.993-3.866-.221-.373A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Escribir por WhatsApp
+        </a>
+        <a href="tel:+573124066324" class="btn-secondary">
+          📞 Llamar directamente
+        </a>
+      </div>
+      <p class="cta-admin fade-up" style="transition-delay:.2s">
+        Administración: <strong>$133.000/mes</strong> · Precio: <strong>$270.000.000</strong> · Castilla, Bogotá
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================
+       FOOTER
+  ============================= -->
+  <footer>
+    <div class="container">
+      <p>Apartamento remodelado en Conjunto Ciudad Favi · Barrio Favidi, Castilla · Bogotá · Estrato 3</p>
+    </div>
+  </footer>
+
+  <!-- ============================
+       BOTÓN FLOTANTE WHATSAPP
+       Número: 573124066324 — edita en el href
+  ============================= -->
+  <a class="wa-float"
+     href="https://wa.me/573124066324?text=Hola%2C%20quiero%20agendar%20una%20visita%20al%20apartamento%20remodelado%20en%20Ciudad%20Favi%2C%20Castilla."
+     target="_blank"
+     rel="noopener"
+     aria-label="Contactar por WhatsApp">
+    <div class="wa-tooltip">Agendar visita</div>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.106 1.514 5.83L.057 23.5a.5.5 0 00.64.64l5.67-1.457A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.671-.515-5.197-1.41l-.373-.222-3.865.993.993-3.866-.221-.373A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <!-- ============================
+       JAVASCRIPT — animaciones y scroll
+  ============================= -->
+  <script>
+    // Animación fade-up al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Header sombra al hacer scroll
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      header.style.boxShadow = window.scrollY > 20
+        ? '0 2px 20px rgba(44,44,44,.08)'
+        : 'none';
+    });
+  </script>
+
+</body>
+</html>
